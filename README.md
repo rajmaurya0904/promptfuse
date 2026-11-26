@@ -24,7 +24,13 @@ pip install -e ".[dev]"
 
 ## Limitations
 
-<!-- Honest and short: what it does NOT do, known gaps. -->
+**Limitations**
+
+- Relies on external language model APIs (e.g., Anthropic Claude); if the service is unavailable or the model version changes, evaluations may fail.
+- Subject to provider rate limits; large test suites can hit request quotas and cause throttling.
+- Evaluation is deterministic only when the underlying model is deterministic; nondeterministic model responses can lead to flaky regression checks.
+- Does not currently support offline or open‑source model back‑ends.
+
 
 ## Development
 
